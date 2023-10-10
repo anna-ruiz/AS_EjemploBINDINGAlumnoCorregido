@@ -50,7 +50,7 @@ public class AddAlumnoActivity extends AppCompatActivity {
                     Intent intent = new Intent();
 
                     //poner el bundle
-                    Bundle bundle = new Bundle();
+                    Bundle bundle = new Bundle(); //cuando estoy de vuelta no pongo la ruta
                     bundle.putSerializable("ALUMNO", alumno);
                     intent.putExtras(bundle);
 
