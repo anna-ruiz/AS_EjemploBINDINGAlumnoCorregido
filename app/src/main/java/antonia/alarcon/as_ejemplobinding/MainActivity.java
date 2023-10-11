@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityResultLauncher<Intent> editAlumnoLauncher;
 
     private ArrayList<Alumno> listaAlumnos;
+    private int posicion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +98,21 @@ public class MainActivity extends AppCompatActivity {
                 new ActivityResultCallback<ActivityResult>() {
                     @Override
                     public void onActivityResult(ActivityResult result) {
-
+                        //comprobar resultado es ok
+                        if (result.getResultCode() == RESULT_OK){
+                            if (result.getData() != null && result.getData().getExtras() != null){
+                                //Si hay datos actualizo
+                                Alumno alumno = (Alumno) result.getData().getExtras().getSerializable("ALUMNO");
+                                listaAlumnos.set(posicion,alumno);
+                                mostrarAlumnos();
+                            }else {
+                                //Si no hay datos borro el alumno (xq habra pulsado el boton eliminar)
+                                listaAlumnos.remove(posicion);
+                                mostrarAlumnos();
+                            }
+                        }
+                        //ver si hay datos
+                        //coger el elumno y modificarlo en la lista
                     }
                 }
         );
@@ -140,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("ALUMNO",alumno);
                     intent.putExtras(bundle);
+                    posicion = listaAlumnos.indexOf(alumno);
                     editAlumnoLauncher.launch(intent);
                 }
             });
