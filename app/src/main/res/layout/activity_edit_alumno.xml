@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
-    tools:context=".AddAlumnoActivity">
+    tools:context=".EditAlumnoActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -19,7 +18,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/txtNombreAddAlumno"
+        android:id="@+id/txtNombreEditAlumno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -28,7 +27,7 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/txtApellidosAddAlumno"
+        android:id="@+id/txtApellidosEditAlumno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -37,14 +36,14 @@
         android:inputType="text" />
 
     <Spinner
-        android:id="@+id/spCiclosAddAlumno"
+        android:id="@+id/spCiclosEditAlumno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:entries="@array/sp_ciclos" />
 
     <RadioGroup
-        android:id="@+id/rgGrupoAddAlumno"
+        android:id="@+id/rgGrupoAEditAlumno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -52,19 +51,19 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/rbGrupoAAddAlumno"
+            android:id="@+id/rbGrupoAEditAlumno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/grupo_a" />
 
         <RadioButton
-            android:id="@+id/rbGrupoBAddAlumno"
+            android:id="@+id/rbGrupoBEditAlumno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/grupo_b" />
 
         <RadioButton
-            android:id="@+id/rbGrupoCAddAlumno"
+            android:id="@+id/rbGrupoCEditAlumno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/grupo_c" />
@@ -78,20 +77,20 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnCancelarAddAlumno"
+            android:id="@+id/btnBorrarEditAlumno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:layout_weight="2"
-            android:text="@string/cancelar"
+            android:text="@string/borrar"
             app:cornerRadius="0dp" />
 
         <Button
-            android:id="@+id/btnCrearAddAlummno"
+            android:id="@+id/btnActualizarEditAlummno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/crear"
+            android:text="@string/actualizar"
             app:cornerRadius="0dp" />
     </LinearLayout>
 </LinearLayout>
